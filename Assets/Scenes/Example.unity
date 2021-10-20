@@ -150,6 +150,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 522174515}
+  - component: {fileID: 522174516}
   m_Layer: 0
   m_Name: Pivot
   m_TagString: Untagged
@@ -171,6 +172,33 @@ Transform:
   m_Father: {fileID: 496552267}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &522174516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 522174514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 817ee933ee990ca48a18d639177a0c60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _parametersList:
+  - _type: 0
+    _influencePosition: 1
+    _influenceRotation: 1
+    _speed: 1
+    _frameOffset: 1
+    _index: 0
+    _lastTime: 0
+  - _type: 5
+    _influencePosition: 1
+    _influenceRotation: 1
+    _speed: 1
+    _frameOffset: 1
+    _index: 0
+    _lastTime: 0
+  _smoothing: 1
 --- !u!1 &901653494
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +359,6 @@ GameObject:
   - component: {fileID: 1626097829}
   - component: {fileID: 1626097828}
   - component: {fileID: 1626097827}
-  - component: {fileID: 1626097831}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -402,22 +429,6 @@ Transform:
   m_Father: {fileID: 522174515}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1626097831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1626097826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 817ee933ee990ca48a18d639177a0c60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _influencePosition: 1
-  _influenceRotation: 1
-  _speed: 1
-  _smoothing: 1
-  _frameOffset: 24
 --- !u!1001 &1786006173
 Prefab:
   m_ObjectHideFlags: 0

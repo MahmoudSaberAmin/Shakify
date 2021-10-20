@@ -19,17 +19,25 @@ public enum ShakifyType
 [System.Serializable]
 public class ShakifyData
 {
-    public ShakifyType type;
-    [SerializeField] private List<Vector3> _positions;
+    public string Name = "Closeup";
+    public ShakifyType Type;
+    [SerializeField]
+    private List<Vector3> _positions;
     [SerializeField] public List<Vector3> _eulers;
+
 
     public Vector3 GetPositionAtIndex(int index)
     {
-        return _positions[index%_positions.Count];
+        return (_positions ==null || _positions.Count==0)?Vector3.zero: _positions[index%_positions.Count];
     }
     public Vector3 GetEulerAtIndex(int index)
     {
         return _eulers[index%_eulers.Count];
+    }
+
+    public override string ToString()
+    {
+        return Type.ToString();
     }
 }
 
@@ -57,7 +65,7 @@ public class CameraDataManager : MonoBehaviour
     {
         foreach (var shakifyData in _rawData)
         {
-            _hashedData[shakifyData.type] = shakifyData;
+            _hashedData[shakifyData.Type] = shakifyData;
         }
     }
 
